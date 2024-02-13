@@ -13,7 +13,7 @@ export default function PhotosScreen() {
         if (hasNextPage) {
             const { assets, endCursor, hasNextPage: next } = await MediaLibrary.getAssetsAsync({
                 mediaType: MediaLibrary.MediaType.photo,
-                first: 20, // Number of photos per page
+                first: 20,
                 after,
             });
             setPhotos([...photos, ...assets]);
@@ -31,7 +31,7 @@ export default function PhotosScreen() {
             }
         })();
     }, []);
-   console.log(photos.at(photos.length - 2))
+
     return (
         <View style={{ flex: 1 }}>
             <View

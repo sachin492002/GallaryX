@@ -1,7 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  photos : []
+  photos : [],
+  album: [],
 };
 
 const appSlice = createSlice({
